@@ -55,11 +55,11 @@ export default function AdminPanel({ onClose }: AdminPanelProps) {
 
   const handleLogin = (e: FormEvent) => {
     e.preventDefault();
-    if (passcode === '1994') {
+    if (passcode === 'sk1911') {
       setIsAuthenticated(true);
       setError('');
     } else {
-      setError('Invalid passcode. Hint: Founding year of Shree Ambika Metal!');
+      setError('Invalid passcode.');
     }
   };
 
@@ -201,10 +201,10 @@ export default function AdminPanel({ onClose }: AdminPanelProps) {
               <div>
                 <input
                   type="password"
-                  placeholder="Enter 4-digit Passcode"
-                  maxLength={4}
+                  placeholder="Enter Passcode"
+                  maxLength={6}
                   value={passcode}
-                  onChange={(e) => setPasscode(e.target.value.replace(/\D/g, ''))}
+                  onChange={(e) => setPasscode(e.target.value)}
                   className="w-full bg-black border border-white/10 rounded-none py-3 px-4 text-center text-lg tracking-[0.4em] font-mono font-bold text-[#D4AF37] focus:outline-none focus:border-[#D4AF37]"
                   autoFocus
                 />
@@ -215,9 +215,6 @@ export default function AdminPanel({ onClose }: AdminPanelProps) {
                   <span>{error}</span>
                 </p>
               )}
-              <p className="text-[10px] text-gray-500 font-sans">
-                Hint: Check Sunil-bhai's card starting year (1994)
-              </p>
               <button
                 type="submit"
                 className="w-full bg-[#D4AF37] text-black font-sans font-bold py-3.5 rounded-none uppercase tracking-widest text-xs hover:bg-[#c49e2e] transition-colors duration-300 cursor-pointer"
