@@ -1,0 +1,12 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allows full read and write access for local bookings and testimonials
+    match /bookings/{bookingId} {
+      allow read, write: if true;
+    }
+    match /reviews/{reviewId} {
+      allow read, write: if true;
+    }
+  }
+}

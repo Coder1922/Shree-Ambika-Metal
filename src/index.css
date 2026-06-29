@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Base Theme Transitions */
+.min-h-screen, section, header, footer, div, h1, h2, h3, h4, p, span, button, input, select, textarea {
+  transition-property: background-color, border-color, color, text-decoration-color, fill, stroke, box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+/* Light Mode Overrides */
+.light {
+  color-scheme: light;
+}
+
+/* Main Container Background & Text */
+.light .min-h-screen {
+  background-color: #F8F9FA !important;
+  color: #111827 !important;
+}
+
+/* Background Overrides */
+.light .bg-\[\#0B0B0B\],
+.light .bg-\[\#0b0b0b\] {
+  background-color: #F3F4F6 !important;
+}
+
+.light .bg-\[\#0B0B0B\]\/50,
+.light .bg-\[\#0b0b0b\]\/50 {
+  background-color: rgba(243, 244, 246, 0.8) !important;
+  backdrop-filter: blur(8px);
+}
+
+.light .bg-\[\#0F0F0F\],
+.light .bg-\[\#0f0f0f\] {
+  background-color: #FFFFFF !important;
+}
+
+.light .bg-\[\#121212\] {
+  background-color: #FFFFFF !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
+}
+
+.light .bg-\[\#1A1A1A\],
+.light .bg-\[\#1a1a1a\] {
+  background-color: #FFFFFF !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05) !important;
+}
+
+.light .bg-\[\#111111\] {
+  background-color: #F3F4F6 !important;
+}
+
+.light .bg-\[\#161616\] {
+  background-color: #F3F4F6 !important;
+}
+
+.light .bg-black\/50 {
+  background-color: rgba(0, 0, 0, 0.03) !important;
+}
+
+.light .bg-black\/40 {
+  background-color: rgba(0, 0, 0, 0.04) !important;
+}
+
+.light .bg-[#0F0F0F] {
+  background-color: #FFFFFF !important;
+}
+
+/* Text Overrides */
+.light .text-white,
+.light .text-\[\#F8F8F8\],
+.light .text-\[\#f8f8f8\],
+.light .text-gray-100,
+.light .text-gray-200,
+.light h1,
+.light h2,
+.light h3,
+.light h4 {
+  color: #111827 !important;
+}
+
+.light .text-gray-300 {
+  color: #374151 !important;
+}
+
+.light .text-gray-400 {
+  color: #4B5563 !important;
+}
+
+.light .text-gray-500 {
+  color: #6B7280 !important;
+}
+
+.light .text-gray-600 {
+  color: #4B5563 !important;
+}
+
+/* Custom Highlight or Accent text retains colors */
+.light .text-\[\#D4AF37\],
+.light .text-\[\#d4af37\] {
+  color: #B58E1A !important;
+}
+
+/* Border Overrides */
+.light .border-white\/5 {
+  border-color: rgba(0, 0, 0, 0.06) !important;
+}
+
+.light .border-white\/10 {
+  border-color: rgba(0, 0, 0, 0.09) !important;
+}
+
+.light .border-white\/20 {
+  border-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+.light .border-gray-800 {
+  border-color: #E5E7EB !important;
+}
+
+.light .border-gray-900 {
+  border-color: #D1D5DB !important;
+}
+
+/* Keep gold/green borders working cleanly */
+.light .border-\[\#D4AF37\],
+.light .border-\[\#d4af37\] {
+  border-color: #B58E1A !important;
+}
+
+.light .border-emerald-500\/30 {
+  border-color: rgba(16, 185, 129, 0.3) !important;
+}
+
+/* Input Overrides */
+.light input,
+.light select,
+.light textarea {
+  background-color: #FFFFFF !important;
+  color: #111827 !important;
+  border-color: #D1D5DB !important;
+}
+
+.light input:focus,
+.light select:focus,
+.light textarea:focus {
+  border-color: #B58E1A !important;
+  ring-color: rgba(181, 142, 26, 0.2) !important;
+}
+
+/* Floating Actions Glow adjustment */
+.light .from-\[\#D4AF37\]\/5 {
+  --tw-gradient-from: rgba(181, 142, 26, 0.03) !important;
+}
+
+/* Dropdowns in Light mode */
+.light select option {
+  background-color: #FFFFFF !important;
+  color: #111827 !important;
+}
+
+/* Partner Access link or buttons */
+.light .text-gray-600.hover\:text-\[\#D4AF37\] {
+  color: #6B7280 !important;
+}
+.light .text-gray-600.hover\:text-\[\#D4AF37\]:hover {
+  color: #B58E1A !important;
+}
+
+/* Custom Admin panels overrides if they show on top */
+.light .bg-black\/90 {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(8px) !important;
+}

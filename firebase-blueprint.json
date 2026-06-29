@@ -1,0 +1,53 @@
+{
+  "entities": {
+    "Booking": {
+      "title": "Booking",
+      "description": "Represents a service booking from a customer",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "customerName": { "type": "string" },
+        "phone": { "type": "string" },
+        "alternativePhone": { "type": "string" },
+        "area": { "type": "string" },
+        "address": { "type": "string" },
+        "serviceCategory": { "type": "string" },
+        "serviceType": { "type": "string" },
+        "bookingDate": { "type": "string" },
+        "timeSlot": { "type": "string" },
+        "notes": { "type": "string" },
+        "status": {
+          "type": "string",
+          "enum": ["pending", "assigned", "completed", "cancelled"]
+        },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "customerName", "phone", "area", "address", "serviceCategory", "serviceType", "bookingDate", "timeSlot", "status", "createdAt"]
+    },
+    "Testimonial": {
+      "title": "Testimonial",
+      "description": "Customer feedback and reviews",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "location": { "type": "string" },
+        "rating": { "type": "integer" },
+        "text": { "type": "string" },
+        "date": { "type": "string" },
+        "verified": { "type": "boolean" }
+      },
+      "required": ["id", "name", "location", "rating", "text", "date", "verified"]
+    }
+  },
+  "firestore": {
+    "bookings/{bookingId}": {
+      "schema": "Booking",
+      "description": "Collection of all geyser and RO service bookings"
+    },
+    "reviews/{reviewId}": {
+      "schema": "Testimonial",
+      "description": "Collection of customer testimonials and reviews"
+    }
+  }
+}
