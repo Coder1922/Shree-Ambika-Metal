@@ -277,6 +277,7 @@ export default function AdminPanel({ onClose }: AdminPanelProps) {
                     <option value="ro_purifier">RO Purifier</option>
                     <option value="electric_geyser">Electric Geyser</option>
                     <option value="water_pressure">Pressure System</option>
+                    <option value="waterproofing">Waterproofing</option>
                   </select>
                 </div>
 

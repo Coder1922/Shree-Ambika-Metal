@@ -206,7 +206,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
               <div className="mt-6 pt-4 border-t border-white/10 text-xs space-y-2 text-gray-400 font-sans">
                 <div className="flex justify-between">
                   <span>Hours:</span>
-                  <span className="text-white font-medium">9:00 AM to 9:00 PM</span>
+                  <span className="text-white font-medium">10:00 AM to 8:00 PM</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Days:</span>

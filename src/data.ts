@@ -56,6 +56,20 @@ export const SERVICES_DATA: ServiceItem[] = [
       'Pipeline Airflow Correction',
       'Pressure Tank Recalibration'
     ]
+  },
+  {
+    id: 'waterproofing',
+    category: 'waterproofing',
+    title: 'Kaycol Waterproofing & Terrace Solutions',
+    description: 'Professional high-grade waterproofing treatments for terrace, walls, tanks, bathrooms, and roofs. Authorized Kaycol application with full service warranty.',
+    pricing: '2 to 10 Years Warranty',
+    features: [
+      'Elastomeric Waterproofing (Flexible, Seamless, Long Lasting)',
+      'Heat Proofing (Reflects Heat, Keeps Surfaces Cool, Energy Efficient)',
+      'Damp Proofing (Prevents Seepage, Protects Structure, Healthy Living)',
+      'Terrace & Industrial Terrace Waterproofing',
+      'Bathroom, Water Tank & Roof Seepage Solutions'
+    ]
   }
 ];
 

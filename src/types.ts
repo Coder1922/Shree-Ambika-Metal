@@ -1,4 +1,4 @@
-export type ServiceCategory = 'gas_geyser' | 'electric_geyser' | 'ro_purifier' | 'water_pressure' | 'general';
+export type ServiceCategory = 'gas_geyser' | 'electric_geyser' | 'ro_purifier' | 'water_pressure' | 'waterproofing' | 'general';
 
 export interface ServiceItem {
   id: string;

@@ -50,10 +50,10 @@ export default function ContactSection() {
                 <div>
                   <h4 className="text-sm font-sans font-bold text-white tracking-wide uppercase text-xs text-[#D4AF37]">Operational Hours</h4>
                   <p className="text-xs sm:text-sm text-gray-400 font-sans mt-1.5">
-                    09:00 AM to 09:00 PM <span className="text-[#D4AF37]">•</span> Monday — Saturday
+                    10:00 AM to 08:00 PM <span className="text-[#D4AF37]">•</span> Monday — Saturday
                   </p>
                   <p className="text-[10px] text-gray-500 font-sans mt-1.5 leading-normal">
-                    *Closed on Sundays and major public holidays. Same-day booking requests must be submitted before 06:00 PM.
+                    *Closed on Sundays and major public holidays. Same-day booking requests must be submitted before 05:00 PM.
                   </p>
                 </div>
               </div>

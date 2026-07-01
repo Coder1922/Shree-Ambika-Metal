@@ -23,7 +23,7 @@ export default function BookingForm({ selectedCategory, onClose, onBookingSucces
     serviceCategory: selectedCategory,
     serviceType: '',
     bookingDate: '',
-    timeSlot: '09:00 AM - 01:00 PM',
+    timeSlot: '10:00 AM - 01:00 PM',
     notes: ''
   });
 
@@ -46,6 +46,7 @@ export default function BookingForm({ selectedCategory, onClose, onBookingSucces
       case 'electric_geyser': return 'Electric Geyser Repair';
       case 'ro_purifier': return 'RO Filters & Membrane Service';
       case 'water_pressure': return 'Booster Pump Installation / Repair';
+      case 'waterproofing': return 'Elastomeric Waterproofing (Terrace/Wall)';
       default: return 'General Maintenance';
     }
   };
@@ -79,6 +80,14 @@ export default function BookingForm({ selectedCategory, onClose, onBookingSucces
           'Booster Pump Installation / Repair',
           'Pressure Switch / Automatic Control Check',
           'Whole House Water Pressure System Service'
+        ];
+      case 'waterproofing':
+        return [
+          'Elastomeric Waterproofing (Terrace/Wall)',
+          'Heat Proofing Treatment (Roof/Terrace)',
+          'Damp Proofing & Seepage Repair',
+          'Bathroom & Water Tank Waterproofing',
+          'Industrial Terrace Waterproofing'
         ];
       default:
         return ['General Repair', 'Inspection / Diagnostic Visit'];
@@ -492,13 +501,13 @@ Please dispatch a service technician. Thank you!`;
                   {/* Time slot picker */}
                   <div>
                     <label className="block text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-2 font-bold">
-                      Preferred Time Slot (9 AM - 9 PM)
+                      Preferred Time Slot (10 AM - 8 PM)
                     </label>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                       {[
-                        '09:00 AM - 01:00 PM',
+                        '10:00 AM - 01:00 PM',
                         '01:00 PM - 05:00 PM',
-                        '05:00 PM - 09:00 PM'
+                        '05:00 PM - 08:00 PM'
                       ].map((slot) => (
                         <button
                           key={slot}

@@ -27,7 +27,7 @@ export default function Navbar({ onOpenBooking, theme, onToggleTheme }: NavbarPr
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Live status (Open vs Closed) check (9:00 AM to 9:00 PM)
+  // Live status (Open vs Closed) check (10:00 AM to 8:00 PM)
   useEffect(() => {
     const checkOpenStatus = () => {
       const now = new Date();
@@ -35,8 +35,8 @@ export default function Navbar({ onOpenBooking, theme, onToggleTheme }: NavbarPr
       const minutes = now.getMinutes();
       const timeInMinutes = hours * 60 + minutes;
 
-      const openTime = 9 * 60; // 9:00 AM
-      const closeTime = 21 * 60; // 9:00 PM
+      const openTime = 10 * 60; // 10:00 AM
+      const closeTime = 20 * 60; // 8:00 PM
 
       const isOpenTime = timeInMinutes >= openTime && timeInMinutes < closeTime;
       setIsOpenNow(isOpenTime);
@@ -181,7 +181,7 @@ export default function Navbar({ onOpenBooking, theme, onToggleTheme }: NavbarPr
                   <span className={`relative inline-flex rounded-full h-2 w-2 ${isOpenNow ? 'bg-emerald-500' : 'bg-amber-500'}`}></span>
                 </span>
                 <span className="text-gray-300 font-medium">
-                  {isOpenNow ? 'Open Now: We are responding!' : `Closed • Opens at 09:00 AM`}
+                  {isOpenNow ? 'Open Now: We are responding!' : `Closed • Opens at 10:00 AM`}
                 </span>
               </div>
 
